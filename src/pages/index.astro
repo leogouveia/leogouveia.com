@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+import Hero from "../components/Hero";
+import Timeline from "../components/Timeline";
+import ProjectGrid from "../components/ProjectGrid";
+---
+
+<BaseLayout>
+  <SiteHeader />
+  <main>
+    <Hero client:load />
+    <AboutSection />
+    <Timeline client:visible />
+    <ProjectGrid client:visible />
+    <ContactSection />
+  </main>
+  <SiteFooter />
+</BaseLayout>

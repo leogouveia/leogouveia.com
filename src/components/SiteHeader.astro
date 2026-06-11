@@ -1,0 +1,25 @@
+---
+import { site } from "../data/site";
+---
+
+<header
+  class="mx-auto flex w-full max-w-[1120px] items-center justify-between px-4 min-h-[72px] sticky top-0 z-10 border-b-[length:var(--spacing-pixel)] border-panel-2 bg-[rgba(16,18,25,0.88)] backdrop-blur-[10px] max-[860px]:static max-[860px]:flex-col max-[860px]:items-start max-[860px]:gap-4 max-[860px]:py-4"
+>
+  <a
+    class="flex items-center gap-3.5 font-bold no-underline"
+    href="#inicio"
+    aria-label="Voltar ao inicio"
+  >
+    <span class="brand-mark">{site.brandMark}</span>
+    <span>{site.name}</span>
+  </a>
+  <nav class="flex flex-wrap items-center gap-3.5" aria-label="Navegacao principal">
+    {
+      site.nav.map((item) => (
+        <a class="nav-link" href={item.href}>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
