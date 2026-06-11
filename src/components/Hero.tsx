@@ -28,11 +28,9 @@ export default function Hero() {
         aria-label="Cartao profissional pixelizado"
       >
         <div className="avatar-frame">
-          <div className="pixel-avatar" aria-hidden="true">
-            {Array.from({ length: PIXEL_CELLS }, (_, index) => (
-              <span key={index} />
-            ))}
-          </div>
+
+          <img src="/avatar.png" alt="Leo Gouveia" />
+
         </div>
         <div className="grid grid-cols-3 gap-3 max-[560px]:grid-cols-1">
           {site.stats.map((stat) => (
